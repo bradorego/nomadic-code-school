@@ -7,44 +7,18 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var del = require('del');
 
-// Set the banner content
-var banner = ['/*!\n',
-    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
-    ' */\n',
-    ''
-].join('');
+
 
 // Default task
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['less', 'copy']);
 
-// Less task to compile the less files and add the banner
+// Less task to compile the less files 
 gulp.task('less', function() {
     return gulp.src('less/grayscale.less')
         .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
-});
-
-// Minify CSS
-gulp.task('minify-css', function() {
-    return gulp.src('css/grayscale.css')
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
-});
-
-// Minify JS
-gulp.task('minify-js', function() {
-    return gulp.src('js/grayscale.js')
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('js'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -86,12 +60,44 @@ gulp.task('browserSync', function() {
         },
     })
 })
+gulp.task('browserSync-deploy', function() {
+    browserSync.init({
+        server: {
+            baseDir: prodRoot
+        },
+    })
+})
+
+var prodRoot = "./deploy";
+var minifyCSS = require('gulp-minify-css'),
+  minifyHTML = require('gulp-minify-html'),
+  usemin = require('gulp-usemin'),
+  rev = require('gulp-rev');
+///usemin
+gulp.task('usemin', function() {
+  del.sync([prodRoot]);
+  return gulp.src('./index.html')
+    .pipe(usemin({
+      css: [ rev() ],
+      html: [ minifyHTML({ empty: true }) ],
+      js: [ uglify(), rev() ],
+      inlinejs: [ uglify() ],
+      inlinecss: [ minifyCSS(), 'concat' ]
+    }))
+    .pipe(gulp.dest(prodRoot));
+});
+
+gulp.task('deploy-img', function () {
+  del.sync([prodRoot + '/img']);
+  return gulp.src('./img/**/*.*')
+    .pipe(gulp.dest(prodRoot + '/img'));
+});
+
+gulp.task('deploy', ['usemin', 'deploy-img']);
 
 // Watch Task that compiles LESS and watches for HTML or JS changes and reloads with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'less'], function() {
     gulp.watch('less/*.less', ['less']);
-    gulp.watch('css/*.css', ['minify-css']);
-    gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
