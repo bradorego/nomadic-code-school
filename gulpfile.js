@@ -34,8 +34,6 @@ gulp.task('less', function() {
 // Minify CSS
 gulp.task('minify-css', function() {
     return gulp.src('css/grayscale.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -45,9 +43,7 @@ gulp.task('minify-css', function() {
 // Minify JS
 gulp.task('minify-js', function() {
     return gulp.src('js/grayscale.js')
-        .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js'))
         .pipe(browserSync.reload({
             stream: true
