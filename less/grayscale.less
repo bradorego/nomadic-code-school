@@ -2,6 +2,8 @@
 @import "mixins.less";
 @import "navbar.less";
 @import "intro.less";
+@import "where.less";
+@import "format.less";
 
 body {
   width: 100%;
@@ -48,7 +50,7 @@ a {
   &:hover,
   &:focus {
       text-decoration: none;
-      color: darken(@primary,20%);
+      color: lighten(@primary,20%);
   }
 }
 
@@ -81,15 +83,14 @@ a {
 }
 
 .btn-default {
-  border: 1px solid @primary;
-  color: @primary;
-  background-color: transparent;
+  border: 2px solid @primary;
+  color: white;
+  background-color: @primary;
   &:hover,
   &:focus {
-      border: 1px solid @primary;
       outline: none;
-      color: black;
-      background-color: @primary;
+      color: @primary;
+      background-color: white;
   }
 }
 
