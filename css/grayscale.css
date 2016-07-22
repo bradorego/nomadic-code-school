@@ -144,6 +144,10 @@
   margin-bottom: 20px;
   text-align: left;
 }
+#share .btn {
+  display: block;
+  margin-bottom: 20px;
+}
 .text-primary {
   color: #9b771d;
 }
