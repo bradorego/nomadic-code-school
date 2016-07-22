@@ -1,38 +1,38 @@
 .intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: white;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  .intro-body {
+    padding: 100px 0px;
+    .brand-heading {
+      font-size: 60px;
+    }
+    .intro-text {
+      font-size: 22px;
+    }
+    .btn {
+      margin-top: 20px;
+    }
+  }
+  @media(min-width:768px) {
+    padding: 0;
     .intro-body {
-        display: table-cell;
-        vertical-align: middle;
-        .brand-heading {
-            font-size: 40px;
-        }
-        .intro-text {
-            font-size: 18px;
-        }
+      padding: 150px 0px;
+     .brand-heading {
+        font-size: 80px;
+      }
+      .intro-text {
+        font-size: 26px;
+      }
     }
-    @media(min-width:768px) {
-        height: 100%;
-        padding: 0;
-        .intro-body {
-            .brand-heading {
-                font-size: 100px;
-            }
-            .intro-text {
-                font-size: 26px;
-            }
-        }
-    }
+  }
 }
 
 .btn-circle {

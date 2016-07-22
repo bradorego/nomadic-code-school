@@ -34,58 +34,31 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="container">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                  Menu <i class="fa fa-bars"></i>
-              </button>
-              <a class="navbar-brand page-scroll" href="#page-top">
-                  <span class="light text-primary">Nomadic Code School</span>
-              </a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-              <ul class="nav navbar-nav">
-                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                  <li class="hidden">
-                      <a href="#page-top"></a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#about">About</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#join">Sign Up</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#learn">What You'll Learn</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#format">Format</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#staff">Staff</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#community">Community</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#curriculum">Curriculum</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#tuition">Tuition</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#contact">Contact</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll primary" href="#share">Share</a>
-                  </li>
-              </ul>
-          </div>
-          <!-- /.navbar-collapse -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">
+          <span>Nomadic Code School</span>
+        </a>
       </div>
-      <!-- /.container -->
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden"><a href="#page-top"></a></li>
+          <li><a class="page-scroll" href="#how">How</a></li>
+          <li><a class="page-scroll" href="#who">Who</a></li>
+          <li><a class="page-scroll" href="#cost">Cost</a></li>
+          <li><a class="page-scroll" href="#contact">Contact</a></li>
+          <li class="button"><a class="page-scroll" href="" onclick="event.preventDefault();window.alert('Sign Up Form');">Sign Up</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
   </nav>
 
   <!-- Intro Header -->
@@ -93,10 +66,10 @@
     <div class="intro-body bg-image">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-10 col-md-offset-1">
             <h1 class="brand-heading">Learn to Code Abroad</h1>
             <p class="intro-text">Learn to code in amazing places with amazing people.</p>
-            <a href="#about" class="btn btn-default btn-lg page-scroll">
+            <a href="" class="btn btn-default btn-lg page-scroll" onclick="event.preventDefault(); window.alert('Sign Up Form');">
               Apply Now!
             </a>
           </div>
@@ -106,104 +79,71 @@
   </header>
 
   <!-- About Section -->
-  <section id="about" class="container content-section text-center">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2>Travel > Code > Evolve</h2>
-        <p>OUR MISSION: TO TEACH PEOPLE VALUABLE TECHNICAL SKILLS BY EMERGING THEM IN A NEW AMAZING ENVIRONMENT WHILE CREATING A LIFE CHANGING EXPERIENCE.</p>
-        <p>We run coding boot camps at exotic locations around the world. If you are looking to get out of your day job, explore the world, and learn skills that will launch your career in the booming software development industry, NOMADIC CODE SCHOOL is for you.</p>
-        <p>We'll take you to 3 different locations during our 3-month boot camp that will expand your horizons and give you the confidence to keep traveling if that's your goal.</p>
+  <div class="row">
+    <section class="container subsection text-center">
+      <div class="col-lg-10 col-lg-offset-1">
+        <h3>Travel > Code > Evolve</h3>
+        <p>We run coding boot camps at exotic locations around the world. If you are looking to get out of your day job, explore the world, and learn skills that will launch your career in the booming software development industry, Nomadic Code School is for you.</p>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
   <!-- Where To Section -->
-  <div class="bg-light">
-    <section id="where" class="container content-section text-center">
+  <div class="bg-light" id="how">
+    <section class="container content-section text-center">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h2>Where We're Headed</h2>
+        <div class="col-md-10 col-md-offset-1">
+          <h1>How It Works</h1>
+          <p>We'll take you to 3 different locations during our 3-month boot camp that will expand your horizons and give you the confidence and skills to keep traveling and work remotely if that's your goal.</p>
+          <p>By the end of the program, you will also have the skills to be a full-stack developer with a few projects for you to showcase in your portfolio. You will be ready to get a job, collaborate with others, or start your own projects.</p>
+          <p>You’ll also have relationships with our instructors and mentors, and access to our full network of mentors and employers eager to help you launch your new career.</p>
+          <h4>Fall 2016 Locations</h4>
           <div class="row cities">
             <div class="col-sm-4">
               <img src="http://placekitten.com/g/200/100" />
-              Bali
+              <p>Bali</p>
             </div>
             <div class="col-sm-4">
               <img src="http://placekitten.com/g/200/100" />
-              Ho Chi Minh City
+              <p>Ho Chi Minh City</p>
             </div>
             <div class="col-sm-4">
               <img src="http://placekitten.com/g/200/100" />
-              Kuala Lumpur
+              <p>Kuala Lumpur</p>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
-
-  <!-- Sign Up Section -->
-  <div class="bg-image" style="background-image:url('../img/downloads-bg.jpg');">
-    <section id="join" class="content-section text-center">
-      <div class="container">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h2>Ready for a Game Changer?</h2>
-          <p>Sign up for our email list to receive updates as we come closer to launching our first session of NOMADIC CODE SCHOOL.</p>
-          <form class="form-inline row">
-            <div class="form-group col-sm-6 col-sm-offset-1">
-              <label class="sr-only" for="exampleInputEmail3">Email Address</label>
-              <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
-            </div>
-            <button type="submit" class="btn btn-default btn-lg col-sm-3">Sign Up</button>
-          </form>
-          <p class="disclaimer">We respect your privacy.</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Learn Section -->
-  <section id="learn" class="content-section text-center">
+  <div class="content-section bg-image typical">
     <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2>What You Will Learn</h2>
-        <p>On day one, you will start with the basics by literally creating your first webpage via a text editor. You will learn front end development, building a variety of browser-based applications, and you will dig into the back end and build server side apps using NodeJS, ExpressJS, MongoDB, and host them on Amazon Web Services.</p>
-        <p>By the end of the program, you will have the skills to be a full-stack, MEAN (MongoDB, ExpressJS, AWS, and NodeJS) developer and even a couple completed projects for you to showcase in your portfolio. You will be ready to get a job, collaborate with others, and start your own projects.</p>
+      <h3>What a typical day might look like:</h3>
+      <div class="row">
+        <div class="text-left no-margin">
+          <p>7AM - (optional) Group Workout</p>
+          <p>9AM - M-TH Instruction / F Project Work</p>
+          <p>12PM - Lunch Break</p>
+          <p>1PM - Study Hall</p>
+          <p>4PM - Break/Exercise</p>
+          <p>5PM - Dinner Break</p>
+          <p>6PM - (occasional) Evening Group Activity</p>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Format Section -->
-  <div class="bg-image" style="background-image:url('../img/test1.jpg');">
-    <section id="format" class="content-section text-center">
-      <div class="container">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h2>What Does A Day Look Like?</h2>
-          <div class="text-left">
-            <p>7AM - (optional) Group Workout</p>
-            <p>9AM - M-TH Instruction / F Project Work</p>
-            <p>12PM - Lunch Break</p>
-            <p>1PM - Study Hall</p>
-            <p>4PM - Break/Exercise</p>
-            <p>5PM - Dinner Break</p>
-            <p>6PM - (occasional) Evening Group Activity</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- Staff Section -->
-  <section id="staff" class="content-section text-center bg-light">
+  <section id="who" class="content-section text-center bg-light who">
     <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2>Staff</h2>
+      <div class="col-md-10 col-md-offset-1">
+        <h1>Who We Are</h1>
         <div class="row">
           <div class="col-sm-4">
             <img src="http://placekitten.com/150/75" />
           </div>
           <div class="col-sm-8">
-            <h3>Brad Orego</h3>
-            Product Designer & User Researcher by Day, Entrepreneur by Night, Dancer by passion. Mentor with Thinkful. Company member with Kanopy Dance Company. Curler. Homebrewer. More at bradorego.com.
+            <h4>Brad Orego</h4>
+            Product Designer & User Researcher by Day, Entrepreneur by Night, Dancer by passion. Mentor with <a href="https://www.thinkful.com" target="_blank">Thinkful</a> and <a href="https://www.codementor.io/" target="_blank">CodeMentor</a>. Company member with <a href="http://kanopydance.org" target="_blank">Kanopy Dance Company</a>. Curler. Homebrewer. More at <a href="https://bradorego.com" target="_blank">bradorego.com</a>.
           </div>
         </div>
         <div class="row">
@@ -211,74 +151,44 @@
             <img src="http://placekitten.com/150/75" />
           </div>
           <div class="col-sm-8">
-            <h3>Andrew Conley</h3>
-            Board member at 100state. Remote Year inaugural member. Travel junkie. All around awesome dude. Consultant with Nordic.
+            <h4>Andrew Conley</h4>
+            Board member at <a href="https://100state.com" target="_blank">100state</a>. <a href="http://remoteyear.com" target="_blank">Remote Year</a> inaugural member. Travel junkie. All around awesome dude. Consultant with <a href="https://www.nordicwi.com/" target="_blakn">Nordic</a>.
           </div>
         </div>
-        <p>Are you a battle hardened hacker looking to travel the world and share your knowledge with other like-minded, eager, excited individuals? We would love to have you! Shoot us an email and let's get the conversation started.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Community Section -->
-  <section id="community" class="content-section text-center bg-image" style="background-image:url('../img/test2.jpg');">
-    <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2>The Community</h2>
-        <p>On day one, you will start with the basics by literally creating your first webpage via a text editor. You will learn front end development, building a variety of browser-based applications, and you will dig into the back end and build server side apps using NodeJS, ExpressJS, MongoDB, and host them on Amazon Web Services.</p>
-        <p>By the end of the program, you will have the skills to be a full-stack, MEAN (MongoDB, ExpressJS, AWS, and NodeJS) developer and even a couple completed projects for you to showcase in your portfolio. You will be ready to get a job, collaborate with others, and start your own projects.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Curriculum Section -->
-  <section id="curriculum" class="content-section text-center bg-light">
-    <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2>MEAN Stack Boot Camp</h2>
-        <div class="text-left">
-          <p>Week 1: Get you setup/the basics</p>
-          <p>Week 2: Learning about the DOM/HTML Basics</p>
-          <p>Week 3: Intro to JavaScript</p>
-          <p>Week 4: Intro to Frameworks</p>
-          <p>Week 5 -6: Advanced Frameworks/ MVC</p>
-          <p>Week 7: Backend Coding with Node</p>
-          <p>Week 8 Backend Frameworks ExpressJS</p>
-          <p>Week 9: Databases 101 MongoDB</p>
-          <p>Week 10: Intro to Dev Ops</p>
-          <p>Week 11 - 12: Final Projects/Demo Day</p>
-        </div>
+        <p>Are you a battle hardened hacker looking to travel the world and share your knowledge with other like-minded, eager, excited individuals? We would love to hear from you! <a href="mailto:hello@nomadiccodeschool.com" target="_blank">Shoot us an email</a> and let's get the conversation started.</p>
       </div>
     </div>
   </section>
 
   <!-- Tuition Section -->
-  <section id="tuition" class="content-section text-center">
+  <section id="cost" class="content-section text-center">
     <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2>Pricing</h2>
-        <p>Sounds amazing. So how much does it cost?<p>
-        <p>Right now, you pay $15,000 for the entire program. That includes:</p>
-        <ul>
-          <li>Half-week orientation to shake off jet lag, relax, meet your cohort, and get ready for class.</li>
-          <li>3 months of class, office hours, and career advice with our expert staff.</li>
-          <li>3 months of housing and travel to exotic places.</li>
-          <li>6 months of mentorship from our awesome team of mentors.</li>
-          <li>(At least) Weekly community-building events.</li>
-          <li>"Coder Fuel" - aka coffee, snacks, anything else you'll need to power through.</li>
-          <li>Connections to our partners and sponsors.</li>
-          <li>Demo Day to show off your newfound skills and network with potential employers.</li>
-        </ul>
-        <p>We'll let you compare the total cost and what's included with some of the other (conventional) code schools out there.</p>
+      <div class="col-md-10 col-md-offset-1">
+        <h1>Pricing</h1>
+        <div class="text-left">
+          <p>Sounds amazing. So how much does it cost?</p>
+          <p>Right now, you pay $15,000 for the entire program. That includes:</p>
+          <ul>
+            <li>Half-week orientation to shake off jet lag, relax, meet your cohort, and get ready for class.</li>
+            <li>3 months of class, office hours, and career advice with our expert staff.</li>
+            <li>3 months of housing and travel to exotic places.</li>
+            <li>6 months of mentorship from our awesome team of mentors.</li>
+            <li>(At least) Weekly community-building events.</li>
+            <li>"Coder Fuel" - aka coffee, snacks, anything else you'll need to power through.</li>
+            <li>Connections to our partners and sponsors.</li>
+            <li>Demo Day to show off your newfound skills and network with potential employers.</li>
+          </ul>
+          <p>We'll let you compare the total cost and what's included with some of the other (conventional) code schools out there.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <div class="bg-image" style="background-image:url('../img/test3.jpg');">
+  <div class="bg-image contact">
     <section id="contact" class="container content-section text-center">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-md-10 col-md-offset-1">
           <h2>Contact Us</h2>
           <div class="controls text-left">
             <div class="row">
@@ -326,7 +236,7 @@
   <!-- Share Section -->
   <section id="share" class="content-section text-center bg-light">
     <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-md-10 col-md-offset-1">
         <h2>Get the Word Out</h2>
         <p>Whether you now someone looking to get out and explore the world while learning a new set of skills or you just like what were doing and want to shout it out please feel free to share NOMADIC CODE SCHOOL with the world.</p>
         <ul class="list-inline banner-social-buttons">

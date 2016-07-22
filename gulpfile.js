@@ -12,7 +12,7 @@ var del = require('del');
 
 
 // Default task
-gulp.task('default', ['less', 'copy']);
+gulp.task('default', ['less', 'copy', 'browserSync']);
 
 // Less task to compile the less files 
 gulp.task('less', function() {
@@ -97,8 +97,9 @@ gulp.task('deploy', ['usemin', 'deploy-img']);
 
 // Watch Task that compiles LESS and watches for HTML or JS changes and reloads with browserSync
 gulp.task('dev', ['browserSync', 'less'], function() {
-    gulp.watch('less/*.less', ['less']);
-    // Reloads the browser whenever HTML or JS files change
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('js/**/*.js', browserSync.reload);
+  gulp.watch('less/*.less', ['less']);
+  // Reloads the browser whenever HTML or JS files change
+  gulp.watch('css/**/*.css', browserSync.reload)
+  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('js/**/*.js', browserSync.reload);
 });

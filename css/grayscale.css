@@ -64,10 +64,8 @@
   }
 }
 .intro {
-  display: table;
   width: 100%;
   height: auto;
-  padding: 100px 0;
   text-align: center;
   color: white;
   background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
@@ -78,22 +76,26 @@
   -o-background-size: cover;
 }
 .intro .intro-body {
-  display: table-cell;
-  vertical-align: middle;
+  padding: 100px 0px;
 }
 .intro .intro-body .brand-heading {
-  font-size: 40px;
+  font-size: 60px;
 }
 .intro .intro-body .intro-text {
-  font-size: 18px;
+  font-size: 22px;
+}
+.intro .intro-body .btn {
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .intro {
-    height: 100%;
     padding: 0;
   }
+  .intro .intro-body {
+    padding: 150px 0px;
+  }
   .intro .intro-body .brand-heading {
-    font-size: 100px;
+    font-size: 80px;
   }
   .intro .intro-body .intro-text {
     font-size: 26px;
@@ -131,13 +133,16 @@
 #where .cities img {
   width: 100%;
 }
-#format p,
-#curriculum p {
-  margin: 0;
-}
 #join input {
   width: 100%;
   padding: 23px 10px;
+}
+.who h4 {
+  margin-bottom: 0;
+}
+.who .row {
+  margin-bottom: 20px;
+  text-align: left;
 }
 .text-primary {
   color: #9b771d;
@@ -147,17 +152,55 @@
   font-style: italic;
   margin-top: 10px;
 }
+.no-margin {
+  margin: 0;
+}
+.no-margin *,
+.no-margin p {
+  margin: 0;
+}
+.nav li.button {
+  background: #9b771d;
+}
+.nav li.button a:active,
+.nav li.button a:hover,
+.nav li.button a:focus {
+  color: white;
+}
 .bg-light {
   background: white;
   color: black;
 }
 .bg-image {
-  background-size: cover;
-  background-position: center center;
+  position: relative;
+}
+.bg-image:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
   background-repeat: no-repeat;
+  background-position: center center;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.bg-image.typical:after {
+  background-image: url('../img/test1.jpg');
+}
+.bg-image.contact:after {
+  background-image: url('../img/test3.jpg');
 }
 .bg-image .container {
   text-shadow: 0px 0px 3px black,0px 0px 8px black;
+  opacity: 1;
 }
 body {
   width: 100%;
@@ -182,16 +225,18 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
 }
+h4 {
+  margin-bottom: 20px;
+}
 p {
   margin: 0 0 15px;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.25;
 }
 @media (min-width: 768px) {
   p {
     margin: 0 0 20px;
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 18px;
   }
 }
 a {
@@ -209,7 +254,10 @@ a:focus {
   font-weight: 400;
 }
 .content-section {
-  padding: 50px 10px;
+  padding: 50px 0px;
+}
+.subsection {
+  padding: 20px 0px;
 }
 #download {
   background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
@@ -265,13 +313,13 @@ footer p {
 }
 ::-moz-selection {
   text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
+  background: #999999;
+  color: white;
 }
 ::selection {
   text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
+  background: #999999;
+  color: white;
 }
 img::selection {
   background: transparent;
